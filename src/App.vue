@@ -343,21 +343,3 @@ export default {
   gap: var(--spacing-2);
 }
 </style>
-  color: #42b983;
-}
-
-button {
-  background-color: #42b983;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 0;
-}
-
-button:hover {
-  background-color: #369970;
-}
-</style>
