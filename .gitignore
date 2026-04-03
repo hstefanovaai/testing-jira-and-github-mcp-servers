@@ -1,0 +1,15 @@
+# Vite
+dist/
+node_modules/
+.vite/
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
