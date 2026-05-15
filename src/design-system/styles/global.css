@@ -1,0 +1,440 @@
+/**
+ * Material 3 Global Styles
+ * Base styles and CSS reset aligned with Material 3 specifications
+ */
+
+:root {
+  /* Light theme colors */
+  --color-primary: #6750A4;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #EADDFF;
+  --color-on-primary-container: #21005D;
+
+  --color-secondary: #625B71;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #E8DEF8;
+  --color-on-secondary-container: #1D192B;
+
+  --color-tertiary: #7D5260;
+  --color-on-tertiary: #FFFFFF;
+  --color-tertiary-container: #FFD8E4;
+  --color-on-tertiary-container: #31111D;
+
+  --color-error: #B3261E;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #F9DEDC;
+  --color-on-error-container: #410E0B;
+
+  --color-background: #FFFBFE;
+  --color-on-background: #1C1B1F;
+  --color-surface: #FFFBFE;
+  --color-on-surface: #1C1B1F;
+  --color-surface-variant: #E7E0EC;
+  --color-on-surface-variant: #49454E;
+  --color-outline: #79747E;
+  --color-outline-variant: #CAC7D0;
+  --color-scrim: #000000;
+
+  /* Typography */
+  --font-family-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-headline: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-title: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-label: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  --font-size-display-large: 57px;
+  --font-size-display-medium: 45px;
+  --font-size-display-small: 36px;
+  --font-size-headline-large: 32px;
+  --font-size-headline-medium: 28px;
+  --font-size-headline-small: 24px;
+  --font-size-title-large: 22px;
+  --font-size-title-medium: 16px;
+  --font-size-title-small: 14px;
+  --font-size-body-large: 16px;
+  --font-size-body-medium: 14px;
+  --font-size-body-small: 12px;
+  --font-size-label-large: 14px;
+  --font-size-label-medium: 12px;
+  --font-size-label-small: 11px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  --line-height-display-large: 64px;
+  --line-height-display-medium: 52px;
+  --line-height-display-small: 44px;
+  --line-height-headline-large: 40px;
+  --line-height-headline-medium: 36px;
+  --line-height-headline-small: 32px;
+  --line-height-title-large: 28px;
+  --line-height-title-medium: 24px;
+  --line-height-title-small: 20px;
+  --line-height-body-large: 24px;
+  --line-height-body-medium: 20px;
+  --line-height-body-small: 16px;
+  --line-height-label-large: 20px;
+  --line-height-label-medium: 16px;
+  --line-height-label-small: 16px;
+
+  --letter-spacing-display: 0px;
+  --letter-spacing-headline: 0px;
+  --letter-spacing-title-large: 0px;
+  --letter-spacing-title-medium: 0.1px;
+  --letter-spacing-title-small: 0.1px;
+  --letter-spacing-body-large: 0.15px;
+  --letter-spacing-body-medium: 0.25px;
+  --letter-spacing-body-small: 0.4px;
+  --letter-spacing-label-large: 0.1px;
+  --letter-spacing-label-medium: 0.5px;
+  --letter-spacing-label-small: 0.5px;
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+
+  /* Shape */
+  --shape-none: 0px;
+  --shape-extra-small: 4px;
+  --shape-small: 8px;
+  --shape-medium: 12px;
+  --shape-large: 16px;
+  --shape-extra-large: 28px;
+  --shape-full: 9999px;
+
+  /* Elevation */
+  --elevation-0: none;
+  --elevation-1: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  --elevation-2: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  --elevation-3: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  --elevation-4: 0px 15px 25px rgba(0, 0, 0, 0.15), 0px 5px 10px rgba(0, 0, 0, 0.05);
+  --elevation-5: 0px 20px 40px rgba(0, 0, 0, 0.2);
+
+  /* State layers */
+  --state-layer-hover: 0.08;
+  --state-layer-pressed: 0.12;
+  --state-layer-focused: 0.12;
+  --state-layer-dragged: 0.16;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --color-primary: #D0BCFF;
+  --color-on-primary: #371E55;
+  --color-primary-container: #4F378A;
+  --color-on-primary-container: #EADDFF;
+
+  --color-secondary: #CCC7DB;
+  --color-on-secondary: #332D41;
+  --color-secondary-container: #4A4458;
+  --color-on-secondary-container: #E8DEF8;
+
+  --color-tertiary: #F4AEFF;
+  --color-on-tertiary: #492532;
+  --color-tertiary-container: #633B48;
+  --color-on-tertiary-container: #FFD8E4;
+
+  --color-error: #F2B8B5;
+  --color-on-error: #601410;
+  --color-error-container: #8C1D18;
+  --color-on-error-container: #F9DEDC;
+
+  --color-background: #1C1B1F;
+  --color-on-background: #E6E1E6;
+  --color-surface: #1C1B1F;
+  --color-on-surface: #E6E1E6;
+  --color-surface-variant: #49454E;
+  --color-on-surface-variant: #CAC7D0;
+  --color-outline: #938F99;
+  --color-outline-variant: #49454E;
+}
+
+/* CSS Reset and base styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-medium);
+  line-height: var(--line-height-body-medium);
+  letter-spacing: var(--letter-spacing-body-medium);
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+  transition: background-color 0.2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-regular);
+  margin-bottom: var(--spacing-4);
+}
+
+h1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-large);
+  line-height: var(--line-height-display-large);
+  letter-spacing: var(--letter-spacing-display);
+}
+
+h2 {
+  font-family: var(--font-family-headline);
+  font-size: var(--font-size-headline-large);
+  line-height: var(--line-height-headline-large);
+  letter-spacing: var(--letter-spacing-headline);
+}
+
+h3 {
+  font-family: var(--font-family-headline);
+  font-size: var(--font-size-headline-medium);
+  line-height: var(--line-height-headline-medium);
+  letter-spacing: var(--letter-spacing-headline);
+}
+
+h4 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title-large);
+  line-height: var(--line-height-title-large);
+  letter-spacing: var(--letter-spacing-title-large);
+}
+
+h5 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title-medium);
+  line-height: var(--line-height-title-medium);
+  letter-spacing: var(--letter-spacing-title-medium);
+}
+
+h6 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title-small);
+  line-height: var(--line-height-title-small);
+  letter-spacing: var(--letter-spacing-title-small);
+}
+
+p {
+  margin-bottom: var(--spacing-3);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
+  border: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  margin-bottom: var(--spacing-3);
+}
+
+li {
+  margin-bottom: var(--spacing-1);
+}
+
+code {
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--shape-small);
+  font-family: 'Courier New', monospace;
+}
+
+pre {
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+  padding: var(--spacing-4);
+  border-radius: var(--shape-medium);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-3);
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Utility classes for typography */
+.display-large {
+  font-size: var(--font-size-display-large);
+  line-height: var(--line-height-display-large);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-regular);
+}
+
+.display-medium {
+  font-size: var(--font-size-display-medium);
+  line-height: var(--line-height-display-medium);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-regular);
+}
+
+.display-small {
+  font-size: var(--font-size-display-small);
+  line-height: var(--line-height-display-small);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-regular);
+}
+
+.headline-large {
+  font-size: var(--font-size-headline-large);
+  line-height: var(--line-height-headline-large);
+  letter-spacing: var(--letter-spacing-headline);
+  font-weight: var(--font-weight-regular);
+}
+
+.headline-medium {
+  font-size: var(--font-size-headline-medium);
+  line-height: var(--line-height-headline-medium);
+  letter-spacing: var(--letter-spacing-headline);
+  font-weight: var(--font-weight-regular);
+}
+
+.headline-small {
+  font-size: var(--font-size-headline-small);
+  line-height: var(--line-height-headline-small);
+  letter-spacing: var(--letter-spacing-headline);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-large {
+  font-size: var(--font-size-title-large);
+  line-height: var(--line-height-title-large);
+  letter-spacing: var(--letter-spacing-title-large);
+  font-weight: var(--font-weight-medium);
+}
+
+.title-medium {
+  font-size: var(--font-size-title-medium);
+  line-height: var(--line-height-title-medium);
+  letter-spacing: var(--letter-spacing-title-medium);
+  font-weight: var(--font-weight-medium);
+}
+
+.title-small {
+  font-size: var(--font-size-title-small);
+  line-height: var(--line-height-title-small);
+  letter-spacing: var(--letter-spacing-title-small);
+  font-weight: var(--font-weight-medium);
+}
+
+.body-large {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  letter-spacing: var(--letter-spacing-body-large);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-medium {
+  font-size: var(--font-size-body-medium);
+  line-height: var(--line-height-body-medium);
+  letter-spacing: var(--letter-spacing-body-medium);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-small {
+  font-size: var(--font-size-body-small);
+  line-height: var(--line-height-body-small);
+  letter-spacing: var(--letter-spacing-body-small);
+  font-weight: var(--font-weight-regular);
+}
+
+.label-large {
+  font-size: var(--font-size-label-large);
+  line-height: var(--line-height-label-large);
+  letter-spacing: var(--letter-spacing-label-large);
+  font-weight: var(--font-weight-medium);
+}
+
+.label-medium {
+  font-size: var(--font-size-label-medium);
+  line-height: var(--line-height-label-medium);
+  letter-spacing: var(--letter-spacing-label-medium);
+  font-weight: var(--font-weight-medium);
+}
+
+.label-small {
+  font-size: var(--font-size-label-small);
+  line-height: var(--line-height-label-small);
+  letter-spacing: var(--letter-spacing-label-small);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Utility classes for spacing */
+.m-0 { margin: var(--spacing-0); }
+.m-1 { margin: var(--spacing-1); }
+.m-2 { margin: var(--spacing-2); }
+.m-3 { margin: var(--spacing-3); }
+.m-4 { margin: var(--spacing-4); }
+.m-5 { margin: var(--spacing-5); }
+
+.p-0 { padding: var(--spacing-0); }
+.p-1 { padding: var(--spacing-1); }
+.p-2 { padding: var(--spacing-2); }
+.p-3 { padding: var(--spacing-3); }
+.p-4 { padding: var(--spacing-4); }
+.p-5 { padding: var(--spacing-5); }
+
+/* Utility classes for colors */
+.text-primary { color: var(--color-primary); }
+.text-on-primary { color: var(--color-on-primary); }
+.text-error { color: var(--color-error); }
+.text-on-error { color: var(--color-on-error); }
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface-variant { background-color: var(--color-surface-variant); }
