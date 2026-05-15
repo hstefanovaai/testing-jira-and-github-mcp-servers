@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <!-- Top App Bar -->
-    <MTopAppBar title="Material 3 Design System">
-      <template #actions>
-        <MIconButton aria-label="Search">🔍</MIconButton>
-        <MIconButton aria-label="More options">⋯</MIconButton>
-      </template>
-    </MTopAppBar>
+    <!-- Sidebar Navigation -->
+    <MSidebar @logout="handleLogout" />
 
-    <!-- Main content -->
-    <div class="app-content">
+    <!-- Main Layout -->
+    <div class="app-layout">
+      <!-- Top App Bar -->
+      <MTopAppBar title="Material 3 Design System">
+        <template #actions>
+          <MIconButton aria-label="Search">🔍</MIconButton>
+          <MIconButton aria-label="More options">⋯</MIconButton>
+        </template>
+      </MTopAppBar>
+
+      <!-- Main content -->
+      <div class="app-content">
       <h1 class="headline-large">Material 3 Design System</h1>
       <p class="body-large">A complete Material 3 design system implementation for Vue 3 using the Options API</p>
 
@@ -241,12 +246,18 @@
         @action="handleSnackbarAction"
       />
     </div>
+    </div>
   </div>
 </template>
 
 <script>
+import MSidebar from './components/MSidebar.vue';
+
 export default {
   name: 'App',
+  components: {
+    MSidebar,
+  },
   data() {
     return {
       textInput: '',
@@ -289,6 +300,10 @@ export default {
     handleSnackbarAction() {
       console.log('Snackbar action triggered');
     },
+    handleLogout() {
+      console.log('Logout triggered from sidebar');
+      // Implement logout logic here (e.g., clear auth, redirect to login)
+    },
   },
 };
 </script>
@@ -296,8 +311,13 @@ export default {
 <style>
 #app {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .app-content {
@@ -306,6 +326,7 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  overflow-y: auto;
 }
 
 .section {
